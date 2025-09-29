@@ -31,10 +31,11 @@ class MainActivity : AppCompatActivity() {
             LinearLayoutManager.VERTICAL, false
         )
 
-        // Attach swipe-to-delete
+        // Swipe-to-delete
         val itemTouchHelper = ItemTouchHelper(catAdapter.swipeToDeleteCallback)
         itemTouchHelper.attachToRecyclerView(recyclerView)
 
+        // Tambahkan minimal 10 kucing
         catAdapter.setData(
             listOf(
                 CatModel(
@@ -57,6 +58,55 @@ class MainActivity : AppCompatActivity() {
                     "Curious George",
                     "Award winning investigator",
                     "https://cdn2.thecatapi.com/images/bar.jpg"
+                ),
+                CatModel(
+                    Gender.Male,
+                    CatBreed.ExoticShorthair,
+                    "Tom",
+                    "Streetwise survivor",
+                    "https://cdn2.thecatapi.com/images/MTY3ODIyMQ.jpg"
+                ),
+                CatModel(
+                    Gender.Female,
+                    CatBreed.BalineseJavanese,
+                    "Luna",
+                    "Queen of the night",
+                    "https://cdn2.thecatapi.com/images/MTY3ODIyNA.jpg"
+                ),
+                CatModel(
+                    Gender.Unknown,
+                    CatBreed.AmericanCurl,
+                    "Mochi",
+                    "Playful troublemaker",
+                    "https://cdn2.thecatapi.com/images/4j7.jpg"
+                ),
+                CatModel(
+                    Gender.Male,
+                    CatBreed.ExoticShorthair,
+                    "Simba",
+                    "The real lion king",
+                    "https://cdn2.thecatapi.com/images/8li.jpg"
+                ),
+                CatModel(
+                    Gender.Female,
+                    CatBreed.AmericanCurl,
+                    "Nala",
+                    "Brave and loyal",
+                    "https://cdn2.thecatapi.com/images/9s5.jpg"
+                ),
+                CatModel(
+                    Gender.Male,
+                    CatBreed.BalineseJavanese,
+                    "Garfield",
+                    "Loves lasagna",
+                    "https://cdn2.thecatapi.com/images/8v2.jpg"
+                ),
+                CatModel(
+                    Gender.Female,
+                    CatBreed.ExoticShorthair,
+                    "Cleo",
+                    "Elegant and calm",
+                    "https://cdn2.thecatapi.com/images/b1f.jpg"
                 )
             )
         )
